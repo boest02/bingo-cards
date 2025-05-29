@@ -30,9 +30,14 @@ export default function CreateCardsPage() {
         }
         const data: BingoTopic[] = await response.json();
         setBingoTopicsData(data);
-      } catch (e: any) {
-        setError(e.message);
-        console.error("Failed to fetch bingo topics:", e);
+      } catch (e: unknown) {
+        if (e instanceof Error) {
+          setError(e.message);
+          console.error("Failed to fetch bingo topics:", e);
+        } else {
+          setError(String(e));
+          console.error("Failed to fetch bingo topics:", e);
+        }
       } finally {
         setIsLoading(false);
       }
@@ -41,15 +46,15 @@ export default function CreateCardsPage() {
     fetchBingoTopics();
   }, []);
 
-  // Determine the items to use based on selection or custom input
-  const getItemsForSelectedTopic = (): string[] => {
-    if (selectedTopic === 'custom' && customTopicInput) {
-      // For custom topics, items will be generated via API
-      return []; // Return empty array initially, items will come from API
-    }
-    const topicData = bingoTopicsData.find((t: BingoTopic) => t.topic === selectedTopic);
-    return topicData ? topicData.items : [];
-  };
+//   // Determine the items to use based on selection or custom input
+//   const getItemsForSelectedTopic = (): string[] => {
+//     if (selectedTopic === 'custom' && customTopicInput) {
+//       // For custom topics, items will be generated via API
+//       return []; // Return empty array initially, items will come from API
+//     }
+//     const topicData = bingoTopicsData.find((t: BingoTopic) => t.topic === selectedTopic);
+//     return topicData ? topicData.items : [];
+//   };
 
   const handleGenerateCards = async (): Promise<void> => {
     let itemsToUse: string[] = [];
@@ -86,13 +91,14 @@ export default function CreateCardsPage() {
           setIsGeneratingCustom(false);
           return;
         }
-
-        // Store generated items in localStorage for the cards page
-        localStorage.setItem(`bingoItems_custom_${encodeURIComponent(topicTitle)}`, JSON.stringify(itemsToUse));
-
-      } catch (e: any) {
-        setError(e.message);
-        console.error("Error generating custom items:", e);
+      } catch (e: unknown) {
+        if (e instanceof Error) {
+          setError(e.message);
+          console.error("Error generating custom items:", e);
+        } else {
+          setError(String(e));
+          console.error("Error generating custom items:", e);
+        }
         setIsGeneratingCustom(false);
         return;
       } finally {
@@ -129,7 +135,7 @@ export default function CreateCardsPage() {
     return (
       <div className="min-h-screen bg-gradient-to-b from-blue-100 to-indigo-200 p-4 sm:p-8 flex flex-col items-center justify-center font-inter">
         <p className="text-xl text-red-700">Error: {error}</p>
-        <p className="text-lg text-gray-700 mt-4">Please ensure 'public/bingoTopics.json' exists and is correctly formatted, or check your network connection.</p>
+        <p className="text-lg text-gray-700 mt-4">Please ensure &#39;public/bingoTopics.json&#39; exists and is correctly formatted, or check your network connection.</p>
         <Link href="/">
           <div className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer mt-8">
             Back to Home

@@ -64,8 +64,9 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Unexpected response from Gemini API.' }, { status: 500 });
     }
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error in API route:', error);
-    return NextResponse.json({ error: error.message || 'Internal server error' }, { status: 500 });
+    const message = error instanceof Error ? error.message : 'Internal server error';
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

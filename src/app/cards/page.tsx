@@ -1,10 +1,10 @@
 // app/cards/page.tsx
-'use client'; // This component uses client-side hooks like useSearchParams and useMemo
+'use client';
 
 import React, { useMemo, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import BingoCard from '../../components/BingoCard'; // Adjust import path for components
+import BingoCard from '../../components/BingoCard';
 
 // Define the interface for a Bingo Topic
 interface BingoTopic {
@@ -18,7 +18,7 @@ export default function CardsPage() {
   const numCards = parseInt(searchParams.get('num') || '0');
   const isCustomTopic = searchParams.get('isCustom') === 'true';
 
-  const [bingoTopicsData, setBingoTopicsData] = useState<BingoTopic[]>([]);
+  // Removed unused bingoTopicsData state
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [currentTopicItems, setCurrentTopicItems] = useState<string[]>([]);
@@ -42,7 +42,6 @@ export default function CardsPage() {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
           const data: BingoTopic[] = await response.json();
-          setBingoTopicsData(data); // Store all topics
           const predefinedTopicData = data.find((t: BingoTopic) => t.topic === selectedTopic);
           if (predefinedTopicData) {
             setCurrentTopicItems(predefinedTopicData.items);
@@ -50,16 +49,21 @@ export default function CardsPage() {
             throw new Error("Predefined topic not found.");
           }
         }
-      } catch (e: any) {
-        setError(e.message);
-        console.error("Failed to fetch/load bingo topics:", e);
+      } catch (e: unknown) {
+        if (e instanceof Error) {
+          setError(e.message);
+          console.error("Failed to fetch/load bingo topics:", e);
+        } else {
+          setError("An unknown error occurred.");
+          console.error("Failed to fetch/load bingo topics:", e);
+        }
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchData();
-  }, [selectedTopic, isCustomTopic]); // Re-run effect if topic or custom status changes
+  }, [selectedTopic, isCustomTopic]);
 
   // Generate cards only if topic data is available and numCards is valid
   const generatedCards: string[][] = useMemo(() => {
@@ -100,7 +104,7 @@ export default function CardsPage() {
       <div className="min-h-screen bg-gradient-to-b from-blue-100 to-indigo-200 p-4 sm:p-8 flex flex-col items-center justify-center font-inter text-center">
         <h1 className="text-3xl font-extrabold text-red-700 mb-4">No Cards Generated</h1>
         <p className="text-lg text-gray-700 mb-8">
-          It looks like there was an issue generating cards for "{selectedTopic}". This might be because the topic generated too few items, or there was an error.
+          It looks like there was an issue generating cards for &quot;{selectedTopic}&quot;. This might be because the topic generated too few items, or there was an error.
         </p>
         <Link href="/create">
           <div className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer">
@@ -118,7 +122,8 @@ export default function CardsPage() {
       </h1>
 
       <div className="w-full max-w-6xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
+        {/* MODIFIED: Changed grid columns for better on-screen and print layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
           {generatedCards.map((items: string[], index: number) => (
             <BingoCard key={index} items={items} topicTitle={selectedTopic} />
           ))}

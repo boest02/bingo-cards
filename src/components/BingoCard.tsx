@@ -10,14 +10,14 @@ interface BingoCardProps {
 }
 
 // Helper function to shuffle an array (Fisher-Yates algorithm)
-const shuffleArray = <T extends any>(array: T[]): T[] => {
+function shuffleArray<T>(array: T[]): T[] {
   const newArray = [...array];
   for (let i = newArray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
   }
   return newArray;
-};
+}
 
 // BingoCard Component
 const BingoCard: React.FC<BingoCardProps> = ({ items, topicTitle }) => {

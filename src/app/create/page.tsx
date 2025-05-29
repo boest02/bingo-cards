@@ -46,15 +46,6 @@ export default function CreateCardsPage() {
     fetchBingoTopics();
   }, []);
 
-//   // Determine the items to use based on selection or custom input
-//   const getItemsForSelectedTopic = (): string[] => {
-//     if (selectedTopic === 'custom' && customTopicInput) {
-//       // For custom topics, items will be generated via API
-//       return []; // Return empty array initially, items will come from API
-//     }
-//     const topicData = bingoTopicsData.find((t: BingoTopic) => t.topic === selectedTopic);
-//     return topicData ? topicData.items : [];
-//   };
 
   const handleGenerateCards = async (): Promise<void> => {
     let itemsToUse: string[] = [];
@@ -91,6 +82,9 @@ export default function CreateCardsPage() {
           setIsGeneratingCustom(false);
           return;
         }
+
+        localStorage.setItem(`bingoItems_custom_${encodeURIComponent(topicTitle)}`, JSON.stringify(itemsToUse));
+        
       } catch (e: unknown) {
         if (e instanceof Error) {
           setError(e.message);

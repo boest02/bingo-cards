@@ -7,13 +7,14 @@ export const metadata = {
   description: 'Create custom bingo cards for school-age children.',
 };
 
-import { ReactNode } from "react";
-/* Import Google Font - Inter (moved to globals.css) */
+import { ReactNode, Suspense } from "react";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Suspense>{children}</Suspense>        
+      </body>
     </html>
   );
 }

@@ -1,0 +1,198 @@
+[
+  {
+    "topic": "School Subjects",
+    "items": [
+      "Math", "Reading", "Writing", "Science", "History", "Geography", "Art", "Music",
+      "Physical Education (PE)", "Library", "Spelling", "Grammar", "Algebra", "Geometry",
+      "Biology", "Chemistry", "Physics", "Social Studies", "Computer Class", "Foreign Language",
+      "Recess", "Lunch", "Homework", "Pop Quiz", "Group Project", "Field Trip", "Show and Tell",
+      "Assembly", "Class Pet", "School Play"
+    ]
+  },
+  {
+    "topic": "Outdoor Play",
+    "items": [
+      "Swings", "Slide", "Seesaw", "Monkey Bars", "Sandbox", "Basketball", "Soccer", "Tag",
+      "Hide and Seek", "Jump Rope", "Bike Riding", "Scooter", "Rollerblading", "Chasing",
+      "Building a Fort", "Climbing a Tree", "Catching Bugs", "Cloud Gazing", "Sidewalk Chalk",
+      "Bubbles", "Water Balloons", "Kite Flying", "Frisbee", "Picnic", "Gardening", "Running",
+      "Exploring", "Collecting Leaves", "Snowball Fight", "Making a Snow Angel"
+    ]
+  },
+  {
+    "topic": "Indoor Games",
+    "items": [
+      "Board Game", "Card Game", "Puzzles", "Building Blocks", "Legos", "Video Game", "Charades",
+      "Pictionary", "Twister", "Checkers", "Chess", "Dominos", "Memory Game", "Dress Up",
+      "Puppet Show", "Building a Pillow Fort", "Reading a Book", "Drawing", "Painting", "Play-Doh",
+      "Action Figures", "Dolls", "Stuffed Animals", "Toy Cars", "Train Set", "Marble Run",
+      "Science Kit", "Magic Tricks", "Origami", "Listening to Music"
+    ]
+  },
+  {
+    "topic": "Animals",
+    "items": [
+      "Dog", "Cat", "Bird", "Fish", "Rabbit", "Hamster", "Guinea Pig", "Horse", "Cow", "Pig",
+      "Sheep", "Chicken", "Duck", "Goose", "Lion", "Tiger", "Elephant", "Giraffe", "Monkey",
+      "Zebra", "Bear", "Wolf", "Fox", "Deer", "Squirrel", "Hedgehog", "Owl", "Eagle", "Dolphin",
+      "Whale"
+    ]
+  },
+  {
+    "topic": "Food & Snacks",
+    "items": [
+      "Apple", "Banana", "Orange", "Grapes", "Strawberry", "Carrot", "Broccoli", "Pizza",
+      "Hamburger", "Hot Dog", "French Fries", "Chicken Nuggets", "Pasta", "Sandwich", "Soup",
+      "Cereal", "Milk", "Juice", "Water", "Cookies", "Ice Cream", "Cake", "Candy", "Popcorn",
+      "Chips", "Pretzels", "Yogurt", "Cheese", "Crackers", "Smoothie"
+    ]
+  },
+  {
+    "topic": "Emotions",
+    "items": [
+      "Happy", "Sad", "Angry", "Scared", "Excited", "Surprised", "Confused", "Tired", "Hungry",
+      "Thirsty", "Bored", "Shy", "Proud", "Silly", "Calm", "Worried", "Frustrated", "Curious",
+      "Grateful", "Lonely", "Jealous", "Embarrassed", "Relaxed", "Annoyed", "Content", "Hopeful",
+      "Nervous", "Determined", "Playful", "Thoughtful"
+    ]
+  },
+  {
+    "topic": "Holidays",
+    "items": [
+      "Christmas", "Halloween", "Thanksgiving", "Easter", "New Year's Day", "Valentine's Day",
+      "St. Patrick's Day", "Fourth of July", "Labor Day", "Memorial Day", "Veterans Day",
+      "Mother's Day", "Father's Day", "Grandparent's Day", "Birthday", "Groundhog Day",
+      "Presidents' Day", "Arbor Day", "Earth Day", "Cinco de Mayo", "Diwali", "Hanukkah",
+      "Kwanzaa", "Ramadan", "Eid al-Fitr", "Chinese New Year", "Day of the Dead",
+      "April Fool's Day", "Flag Day", "Columbus Day"
+    ]
+  },
+  {
+    "topic": "Sports",
+    "items": [
+      "Soccer", "Basketball", "Baseball", "Football", "Tennis", "Swimming", "Gymnastics",
+      "Track and Field", "Volleyball", "Hockey", "Golf", "Bowling", "Skateboarding", "Skiing",
+      "Snowboarding", "Cycling", "Running", "Martial Arts", "Dance", "Figure Skating", "Surfing",
+      "Rowing", "Badminton", "Table Tennis", "Archery", "Fencing", "Rugby", "Cricket",
+      "Lacrosse", "Curling"
+    ]
+  },
+  {
+    "topic": "Books & Reading",
+    "items": [
+      "Chapter Book", "Picture Book", "Comic Book", "Graphic Novel", "Fairy Tale", "Mystery",
+      "Adventure", "Fantasy", "Science Fiction", "Biography", "Non-Fiction", "Poetry", "Magazine",
+      "Newspaper", "Dictionary", "Encyclopedia", "Atlas", "Audiobook", "E-book", "Library Card",
+      "Bookmark", "Reading Nook", "Story Time", "Book Club", "Character", "Setting", "Plot",
+      "Author", "Illustrator", "Publisher"
+    ]
+  },
+  {
+    "topic": "Arts & Crafts",
+    "items": [
+      "Drawing", "Painting", "Coloring", "Sculpting", "Origami", "Collage", "Stamping",
+      "Stenciling", "Knitting", "Crocheting", "Sewing", "Embroidery", "Beading",
+      "Jewelry Making", "Pottery", "Clay Modeling", "Paper Mache", "Card Making",
+      "Scrapbooking", "Photography", "Music Making", "Singing", "Playing an Instrument",
+      "Acting", "Dancing", "Making Slime",
+      "Building Models", "Decorating", "Craft Kit", "Art Supplies"
+    ]
+  },
+  {
+    "topic": "Chores",
+    "items": [
+      "Making Bed", "Tidying Room", "Putting Away Toys", "Helping with Dishes", "Setting Table",
+      "Clearing Table", "Taking Out Trash", "Feeding Pet", "Watering Plants", "Folding Laundry",
+      "Putting Away Laundry", "Sweeping Floor", "Vacuuming", "Dusting", "Wiping Counters",
+      "Cleaning Bathroom", "Sorting Recycling", "Helping with Groceries", "Washing Car",
+      "Raking Leaves", "Shoveling Snow", "Weeding Garden", "Organizing Closet",
+      "Cleaning Windows", "Polishing Furniture", "Collecting Mail", "Helping Cook",
+      "Packing Lunch", "Walking Dog", "Emptying Dishwasher"
+    ]
+  },
+  {
+    "topic": "Transportation",
+    "items": [
+      "Car", "Bus", "Train", "Airplane", "Bicycle", "Motorcycle", "Boat", "Ship", "Submarine",
+      "Helicopter", "Truck", "Van", "Taxi", "Ambulance", "Fire Truck", "Police Car", "School Bus",
+      "Tractor", "Skateboard", "Roller Skates", "Scooter", "Wagon", "Stroller", "Wheelchair",
+      "Hot Air Balloon", "Rocket", "Cable Car", "Gondola", "Ferry", "Jet Ski"
+    ]
+  },
+  {
+    "topic": "Weather",
+    "items": [
+      "Sunny", "Cloudy", "Rainy", "Snowy", "Windy", "Stormy", "Foggy", "Misty", "Breezy",
+      "Humid", "Hot", "Cold", "Warm", "Cool", "Freezing", "Thunder", "Lightning", "Rainbow",
+      "Hail", "Sleet", "Blizzard", "Drizzle", "Downpour", "Overcast", "Clear Sky",
+      "Partly Cloudy", "Frost", "Dew", "Tornado", "Hurricane"
+    ]
+  },
+  {
+    "topic": "Family & Friends",
+    "items": [
+      "Mom", "Dad", "Brother", "Sister", "Grandma", "Grandpa", "Aunt", "Uncle", "Cousin", "Pet",
+      "Best Friend", "Neighbor", "Teacher", "Doctor", "Mail Carrier", "Police Officer",
+      "Firefighter", "Librarian", "Babysitter", "Coach", "Playdate", "Sleepover",
+      "Family Dinner", "Birthday Party", "Holiday Gathering", "Sharing", "Helping", "Listening",
+      "Talking", "Laughing"
+    ]
+  },
+  {
+    "topic": "Technology",
+    "items": [
+      "Smartphone", "Tablet", "Computer", "Laptop", "Television", "Headphones", "Speaker",
+      "Camera", "Video Game Console", "Robot", "Drone", "Smartwatch", "E-reader", "Printer",
+      "Keyboard", "Mouse", "Microphone", "Projector", "Calculator", "Internet", "Website", "App",
+      "Email", "Video Call", "Online Game", "Coding", "Virtual Reality", "Augmented Reality",
+      "Charger", "Battery"
+    ]
+  },
+  {
+    "topic": "Nature",
+    "items": [
+      "Tree", "Flower", "Bush", "Grass", "Rock", "River", "Lake", "Ocean", "Mountain", "Hill",
+      "Valley", "Forest", "Desert", "Beach", "Cave", "Waterfall", "Rainbow", "Cloud", "Sun",
+      "Moon", "Stars", "Bird Nest", "Ant Hill", "Spider Web", "Mushroom", "Acorn", "Pinecone",
+      "Leaf", "Twig", "Feather"
+    ]
+  },
+  {
+    "topic": "Musical Instruments",
+    "items": [
+      "Piano", "Guitar", "Drums", "Violin", "Flute", "Clarinet", "Trumpet", "Trombone",
+      "Saxophone", "Cello", "Ukulele", "Recorder", "Xylophone", "Keyboard", "Harmonica",
+      "Accordion", "Banjo", "Mandolin", "Harp", "Oboe", "Bassoon", "Tuba", "French Horn",
+      "Maracas", "Tambourine", "Triangle", "Cymbals", "Bongos", "Conga", "Kazoo"
+    ]
+  },
+  {
+    "topic": "Superheroes/Fantasy",
+    "items": [
+      "Superhero", "Villain", "Magic", "Dragon", "Unicorn", "Fairy", "Wizard", "Witch", "Knight",
+      "Princess", "Prince", "Castle", "Sword", "Shield", "Cape", "Mask", "Secret Identity",
+      "Superpower", "Sidekick", "Mythical Creature", "Elf", "Dwarf", "Giant", "Mermaid",
+      "Goblin", "Ogre", "Troll", "Sorcerer", "Enchanted Forest", "Hidden Treasure"
+    ]
+  },
+  {
+    "topic": "Community Helpers",
+    "items": [
+      "Police Officer", "Firefighter", "Doctor", "Nurse", "Teacher", "Librarian", "Mail Carrier",
+      "Garbage Collector", "Construction Worker", "Chef", "Baker", "Dentist", "Veterinarian",
+      "Farmer", "Pilot", "Flight Attendant", "Bus Driver", "Train Conductor", "Crossing Guard",
+      "Lifeguard", "Electrician", "Plumber", "Mechanic", "Gardener", "Artist", "Musician",
+      "Scientist", "Astronaut", "Journalist", "Architect"
+    ]
+  },
+  {
+    "topic": "Travel/Places",
+    "items": [
+      "Beach", "Mountains", "City", "Countryside", "Park", "Zoo", "Museum", "Aquarium",
+      "Amusement Park", "Library", "School", "Home", "Friend's House", "Restaurant",
+      "Grocery Store", "Shopping Mall", "Airport", "Train Station", "Bus Stop", "Hotel",
+      "Camping", "Road Trip", "Vacation", "Passport", "Suitcase", "Map", "Souvenir",
+      "Postcard", "Tourist", "Landmark"
+    ]
+  }
+]

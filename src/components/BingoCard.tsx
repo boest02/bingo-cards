@@ -40,7 +40,7 @@ const BingoCard: React.FC<BingoCardProps> = ({ items, topicTitle }) => {
   }, [items]);
 
   return (
-    <div className="flex flex-col items-center p-4 border-4 border-blue-600 rounded-lg shadow-xl bg-gradient-to-br from-blue-50 to-blue-100">
+    <div className="bingo-card flex flex-col items-center p-4 border-4 border-blue-600 rounded-lg shadow-xl bg-gradient-to-br from-blue-50 to-blue-100">
       <h3 className="text-2xl font-extrabold text-blue-800 mb-4 text-center font-inter">
         {topicTitle.toUpperCase()} BINGO
       </h3>
@@ -50,7 +50,7 @@ const BingoCard: React.FC<BingoCardProps> = ({ items, topicTitle }) => {
             key={index}
             className={`flex items-center justify-center text-center p-2 rounded-md border border-blue-300 text-sm font-medium ${
               item === "FREE SPACE"
-                ? "bg-blue-400 text-white font-bold"
+                ? "bg-blue-400 text-white font-bold free-space"
                 : "bg-white text-gray-800"
             } hover:bg-blue-200 transition duration-200 ease-in-out cursor-pointer`}
             style={{ minHeight: '60px' }} // Ensure a minimum height for cells

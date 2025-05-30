@@ -5,6 +5,7 @@ import React, { useMemo, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import BingoCard from '../../components/BingoCard';
+import BingoList from '../../components/BingoList';
 
 // Define the interface for a Bingo Topic
 interface BingoTopic {
@@ -117,13 +118,16 @@ export default function CardsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-indigo-200 p-4 sm:p-8 flex flex-col items-center font-inter">
+      <div>
+        <BingoList items={currentTopicItems} title={selectedTopic} />
+      </div>
       <h1 className="text-4xl sm:text-5xl font-extrabold text-blue-900 mb-8 text-center leading-tight">
         Your {selectedTopic} Bingo Cards ({numCards})
       </h1>
 
       <div className="w-full max-w-6xl">
         {/* MODIFIED: Changed grid columns for better on-screen and print layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
+        <div className="all-bingo-cards grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
           {generatedCards.map((items: string[], index: number) => (
             <BingoCard key={index} items={items} topicTitle={selectedTopic} />
           ))}

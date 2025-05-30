@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 a {
@@ -18,16 +18,29 @@ a {
 
 /* --- NEW: Print Styles --- */
 @media print {
+  @page {
+    size: landscape; /* Set the page orientation to landscape */
+    margin-block: 30px !important; /* Remove default margins */
+  }
+
   /* General print adjustments */
-  html, body {
+  html,
+  body {
     height: auto;
     overflow: visible; /* Ensure content is not cut off by scrollbars */
     margin: 0;
     padding: 0;
+    -webkit-print-color-adjust: exact !important; /* Ensure colors are printed as seen on screen */
+    color-adjust: exact !important; /* Ensure colors are printed as seen on screen */
   }
 
   /* Hide elements not needed for print */
-  a, button, nav, .mt-12.text-blue-600, .mb-8.text-center, .max-w-2xl {
+  a,
+  button,
+  nav,
+  .mt-12.text-blue-600,
+  .mb-8.text-center,
+  .max-w-2xl {
     display: none !important; /* Hide navigation links, buttons, and other UI elements */
   }
 
@@ -41,51 +54,62 @@ a {
   }
 
   /* Adjust the main page container for printing, remove flex-col if causing issues */
-  body > div { /* Target the direct child of body (the root layout div) */
+  body > div {
+    /* Target the direct child of body (the root layout div) */
     display: block !important;
+    background: transparent !important; /* Ensure background is transparent */
   }
 
-
-  /* Force the grid to 2 columns for printing */
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 1.5rem !important; /* Consistent gap, 'gap-6' corresponds to 1.5rem */
-    margin: 0 auto !important; /* Center the grid */
-    max-width: 700px !important; /* Limit width to fit a typical page */
-    padding: 1rem !important;
+  .border-4 {
+    border: none !important; /* Remove borders for a cleaner print layout */
   }
 
-  /* Apply page break after every second bingo card */
-  /* This targets the BingoCard wrappers within the grid, ensuring 2 cards per page */
-  .grid > div:nth-child(2n) {
-    page-break-after: always;
+  h1,
+  h2,
+  h3,
+  h4 {
+    fontsize: 90% !important; /* Adjust font sizes for print */
   }
 
-  /* Optional: Adjust title size for print if necessary */
-  h1 {
-    font-size: 1.5rem !important; /* Smaller title for print */
-    margin-bottom: 1rem !important;
-    text-align: center !important;
-    color: #333 !important; /* Darker color for print readability */
+  .bingo-list {    
+    position: relative !important;
+    margin-block: 15px !important; /* Remove margin for print */
+    padding: 0 !important; /* Remove padding for print */
+    box-shadow: none !important; /* Remove shadows for print */
+    background: transparent !important; /* Ensure background is transparent */
+    border: none !important; /* Remove borders for print */
+    width: auto !important; /* Ensure the list takes full width */
+    max-width: none !important; /* Remove max-width to allow full width */   
+
+    h3 {
+      position: absolute !important;
+      top: -10px !important;
+    }
+
+    ul {
+      scale: 0.8 !important; /* Scale down the bingo list for better fit */
+      width: 100% !important; /* Ensure the list takes full width */
+      margin: 0 !important; /* Remove margin for print */
+    }
   }
 
-  /* Ensure card itself is properly scaled if needed */
-  .flex.flex-col.items-center.p-4.border-4 {
-    width: 100% !important; /* Make each card take full available column width */
-    max-width: none !important; /* Remove max-width constraints */
-  }
+  .all-bingo-cards {
+    display: flex !important;
+    flex-wrap: wrap !important; /* Allow cards to wrap for better fit */
+    justify-content: center !important; /* Center the cards */
+    gap: 15px !important; /* Add space between cards */
 
-  .grid-cols-5 {
-    width: 100% !important;
-  }
+    .bingo-card {
+      border: dashed 1px #000 !important; /* Remove borders for print */
+      box-shadow: none !important; /* Remove shadows for print */
+      background: transparent !important; /* Ensure background is transparent */
+      break-before: page; /* Ensure each card starts on a new page if needed */
 
-  .grid-cols-5 > div { /* Bingo cell */
-    min-height: 40px !important; /* Smaller cells for print */
-    padding: 0.5rem !important;
-  }
-
-  h3 { /* Card title */
-    font-size: 1rem !important;
-    margin-bottom: 0.5rem !important;
+      .free-space {
+        color: #fff !important; /* Ensure free space is visible */
+        background: gray !important; /* Ensure free space has a transparent background */
+        border: 2px solid #000 !important; /* Ensure free space has a solid border */
+      }
+    }
   }
 }
